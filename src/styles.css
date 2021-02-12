@@ -67,8 +67,10 @@ background-color:#0000;
 }
 .temp-now {
   font-size: 35px;
-  text-align: right;
   color: black;
+}
+.temp {
+  text-align: right;
 }
 
 .celsius .fahrenheit{
