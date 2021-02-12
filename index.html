@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <script src="https://unpkg.com/axios/dist/axios.min.js" SameSite="None"></script>
+  <script src="https://kit.fontawesome.com/6c2e96ffb2.js" crossorigin="anonymous"></script>
+  <title>Weather</title>
+  <link type="text/css" rel="stylesheet" href="src/styles.css">
+</head>
+
+<body>
+  <div class="container">
+    <header>
+        <span id="current-date"></span>
+        <br/>
+        <span id = "current-time"></span>
+    </header>
+    <h1>
+    </h1>
+    <row class="weatherDescription" id="current-weather-description-1" id="current-weather-description-2">
+    </row>
+        <h2>
+          <div class="row">
+            <div class="col-4">
+                <div class="temp-now" id="degrees-shown">
+              </div>
+              </div>
+            <div class="col-3" id="icon-current-weather">
+                <img src="#" class=shownWeather id=current-image>
+            </div>
+            <div class="col-4">
+              <ul>
+                <li id="humidity"></li>
+                <li id="wind"></li>
+                <li id= "clouds"></li>
+              </ul>
+            </div>
+
+          </h2>
+
+<div class="btn-group shadow-sm rounded" role="group" class="tempUnit">
+    <a 
+      class="btn btn-outline-secondary btn-sm bg" 
+      class="celsius" 
+      href="#" 
+      role=button 
+      target="blank" 
+      id="celsius-ref"
+    > Celsius </a>
+    <a 
+      class="btn btn-outline-secondary btn-sm " 
+      class="fahrenheit" 
+      href="#" 
+      role=button 
+      target="blank" id="fahrenheit-ref"
+    >Fahrenheit </a>  
+  </div>
+
+    <p>
+    <form class="input-group ">
+      <input 
+        type="text" 
+        id="entered-city"
+        class="form-control shadow" 
+        placeholder="Enter city" 
+        aria-describedby="button-addon2"
+        onfocus="this.value=''" >
+      <submit 
+        class="btn btn-primary shadow" 
+        id ="geo-location" 
+        type="submit" 
+        id="button"
+         >🌐</submit>
+      <submit 
+        class="btn btn-primary shadow" 
+        type="submit" 
+        id="button"
+        
+      >Go</submit>
+    </form>
+    </p>
+      <div class="prediction-5dys">
+        Hourly forecast
+        <hr/>
+          <div class="daycard">
+              <div class="weekday" id="date-day-0">
+              </div>
+              <div class="weather_img">
+                  <img src="images/blauwe-wolk.png" id="weather-icon-forecast-0">
+                </div>
+              <div class="degrees" id="degrees-forecast-0">
+                11-12º
+              </div> 
+              <span></span>
+          </div>
+
+          <div class="daycard">
+              <div class="weekday" id="date-day-1">
+              </div>
+              <div class="weather_img">
+                  <img src="images/wolk-zon.png" id="weather-icon-forecast-1">
+              </div>
+              <div class="degrees" id="degrees-forecast-1">
+                11-12º
+              </div>
+              <span></span>
+          </div>
+
+          <div class="daycard">
+            <div class="weekday" id="date-day-2">
+            </div>
+            <div class="weather_img">
+                   <img src="images/blauwe-wolk.png" id="weather-icon-forecast-2">
+            </div>
+            <div class="degrees" id="degrees-forecast-2">
+              11-12º
+            </div>
+            <span></span>
+          </div>
+
+          <div class="daycard">
+            <div class="weekday" id="date-day-3">
+
+            </div>
+            <div class="weather_img">                                
+              <img src="images/blauwe-wolk.png" id="weather-icon-forecast-3">
+            </div>
+            <div class="degrees" id="degrees-forecast-3">
+              11-12º
+            </div>
+            <span></span>
+          </div>
+
+          <div class="daycard">
+            <div class="weekday" id="date-day-4">
+            </div>
+            <div class="weather_img">
+                 <img src="images/Blauwe-wolk.png" id="weather-icon-forecast-4">
+            </div>
+            <div class="degrees" id="degrees-forecast-4">
+ "             11-12º
+            </div>
+            <span></span>
+          </div>
+          <div class="photoAcknowlegdement"> photo by Simone Hutsch </div>
+          <div class="codedBy">coded by Marlous Buining</div>
+  </div>
+ 
+  </div>
+  </body>
+</body>
+</html>
+<script src="src/index.js"></script>
