@@ -23,7 +23,6 @@ li {
 
 h2 {
   font-size: 14px;
-  line-height: 1.5;
   color: rgb(1, 0, 3,0.5);
 }
 .weatherDescription{
@@ -36,9 +35,10 @@ h2 {
 }
 a:href {
   font-size:small;
+    color: rgba(10, 104, 180, 0.7);
+
 }
 a:link {
-  color: rgba(9, 89, 155, 0.7);
   text-decoration: none;
   font-weight: 5px;
 
@@ -52,6 +52,14 @@ a:hover {
 a:active {
 background-color:#0000;
 }
+.btn-group-toggle:active {
+background-color: grey;
+color:white;
+}
+
+.weatherInfo {
+line-height: 1.7;
+}
 
 #entered-city {
   color: rgba(0, 0, 0, 0.4);
@@ -61,8 +69,8 @@ background-color:#0000;
   margin-left: 0;
   text-align: left;
 }
-.col-2, .col-3,
-.col-5 {
+.col-3,
+.col-4 {
   padding: 0;
 }
 .temp-now {

@@ -26,7 +26,6 @@ let apiKey = "13a1b6ce652bc0d4bb4d98d6d58fd9c2";
 
 
 function showTemperature (response){
-  console.log(response);
     city = response.data.name;
    // document.querySelector("#entered-city").value = city;   //important to remember
     let h1 = document.querySelector("h1");
@@ -49,15 +48,15 @@ function showTemperature (response){
     let clouds = document.querySelector("#clouds");
         clouds.innerHTML = `Clouds ${cloudValue}%`; 
       if (unit=="imperial"){
-        h1.innerHTML = `${city} feels like ${feelTemp}ºF`;
-        standardDegrees.innerHTML = `${tempMin}/ ${tempMax}ºFº`
+        h1.innerHTML = `${city} feels like ${feelTemp}º`;
+        standardDegrees.innerHTML = `${tempMin} / ${tempMax}º`
         wind.innerHTML = `Wind ${windValue} m/hr`;
         p1.innerHTML = `Today, ${day} ${month} ${date}, will have ${cloudsDescription}. `;
 
       } else {
-        h1.innerHTML = `${city} feels like ${feelTemp}ºC`;
-        standardDegrees.innerHTML = `${tempMin} - ${tempMax}ºC`;
-        wind.innerHTML = `Wind ${windValue} m/sec`;
+        h1.innerHTML = `${city} feels like ${feelTemp}º`;
+        standardDegrees.innerHTML = `${tempMin} / ${tempMax}º`;
+        wind.innerHTML = `Wind ${windValue} km/hrs`;
         p1.innerHTML = `Today, ${day} ${month} ${date}, will have ${cloudsDescription}.`;
 
     }
@@ -88,7 +87,6 @@ function showTemperature (response){
 }
 
 function showForecast (response) {
-  console.log(response);
   //daycard 0:
 let temp0 = document.querySelector("#degrees-forecast-0");
 let tempCard0 = Math.round(response.data.list[0].main.temp);
