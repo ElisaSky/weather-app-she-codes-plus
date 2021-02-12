@@ -50,7 +50,7 @@ function showTemperature (response){
         clouds.innerHTML = `Clouds ${cloudValue}%`; 
       if (unit=="imperial"){
         h1.innerHTML = `${city} feels like ${feelTemp}ºF`;
-        standardDegrees.innerHTML = `${tempMin} - ${tempMax}ºFº`
+        standardDegrees.innerHTML = `${tempMin}/ ${tempMax}ºFº`
         wind.innerHTML = `Wind ${windValue} m/hr`;
         p1.innerHTML = `Today, ${day} ${month} ${date}, will have ${cloudsDescription}. `;
 
