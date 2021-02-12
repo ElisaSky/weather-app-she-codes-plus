@@ -5,7 +5,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-color: #87b3be;
-  font-size: 16 px;
+  font-size: 16px;
 }
 header {
   color: rgb(81, 112, 119,0.5);
@@ -32,6 +32,11 @@ h2 {
 #degreeButtons{
 float: right;
 font-size: 10px;
+}
+
+#degreeButtons:active {
+background-color: grey;
+color:white;
 }
 
 .row {

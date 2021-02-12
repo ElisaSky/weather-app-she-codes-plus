@@ -243,3 +243,8 @@ function getApiUrlForecast (){
 //})
 //tempToggle.addEventListener("click", FahrenheitToCelsius(true), CelsiusToFahrenheit(false))
 
+// achtergrond aanpassen aan weer op basis van locatie of beschrijving
+// naast hourly ook per dag?
+// aanpassen linker tekst colom naar ul/li met zelfde line height
+//aanpassen button grootte
+// text en tijd in het midden
