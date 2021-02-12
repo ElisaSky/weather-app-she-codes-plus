@@ -48,14 +48,14 @@ function showTemperature (response){
     let clouds = document.querySelector("#clouds");
         clouds.innerHTML = `Clouds ${cloudValue}%`; 
       if (unit=="imperial"){
-        h1.innerHTML = `${city} feels like ${feelTemp}º`;
-        standardDegrees.innerHTML = `${tempMin} / ${tempMax}º`
+        h1.innerHTML = `${city} feels like ${feelTemp}ºF`;
+        standardDegrees.innerHTML = `Currently ${temp}º <br> Min ${tempMin}º <br> Max ${tempMax}º`;
         wind.innerHTML = `Wind ${windValue} m/hr`;
         p1.innerHTML = `Today, ${day} ${month} ${date}, will have ${cloudsDescription}. `;
 
       } else {
-        h1.innerHTML = `${city} feels like ${feelTemp}º`;
-        standardDegrees.innerHTML = `${tempMin} / ${tempMax}º`;
+        h1.innerHTML = `${city} feels like ${feelTemp}ºC`;
+        standardDegrees.innerHTML = `Currently ${temp}º <br> Min ${tempMin}º <br> Max ${tempMax}º`;
         wind.innerHTML = `Wind ${windValue} km/hrs`;
         p1.innerHTML = `Today, ${day} ${month} ${date}, will have ${cloudsDescription}.`;
 
@@ -230,3 +230,16 @@ function getApiUrl() {
 function getApiUrlForecast (){
   return `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=${unit}&lang=en&appid=${apiKey}`;
 }
+
+//let tempToggle = true
+//tempToggle= document.querySelector("#tempToggle");
+//tempToggle.addEventListener("click", function(event) {
+  //console.log(this.checked)
+  //if (this.checked) {
+    // CelsiusToFahrenheit(event)
+  //} else {
+  //  FahrenheitToCelsius (event)
+ // }
+//})
+//tempToggle.addEventListener("click", FahrenheitToCelsius(true), CelsiusToFahrenheit(false))
+
