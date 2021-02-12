@@ -25,23 +25,9 @@
         <h2>
           <div class="row">
             <div class="col-4 temp">
-                <div class="temp-now" id="degrees-shown">
+                <div class="tempNow" id="degrees-shown">
               </div>
-              <div class="btn-group tempUnit" role="group">
-                <a 
-                class="btn btn-outline-secondary btn-sm bg celsius" 
-                href="#"  
-                role="button" 
-                target="blank" 
-                id="celsius-ref"
-                >Celsius </a>
-                <a class="btn btn-outline-secondary btn-sm fahrenheit" 
-                href="#" 
-                role="button" 
-                target="blank"
-                id="fahrenheit-ref"
-                >Fahrenheit </a>
-              </div>
+
               </div>
             <div class="col-3" id="icon-current-weather">
                 <img src="#" class=shownWeather id=current-image>
@@ -53,10 +39,9 @@
                 <li id= "clouds"></li>
               </ul>
             </div>
-
+          </div>
           </h2>
-
-    <p>
+    
     <form class="input-group ">
       <input 
         type="text" 
@@ -78,6 +63,14 @@
         
       >Go</submit>
     </form>
+    <p>
+      <div class="btn-group tempUnit" role="group" id="degreeButtons" aria-label="DegreesButton toggle button group">
+        <input type="degrees" class="btn-check" id="celsius-ref" autocomplete="on" checked>
+        <label class="btn btn-outline-secondary btn-sm left" for="celsius-ref">Celsius</label>
+      
+        <input type="degrees" class="btn-check" id="fahrenheit-ref" autocomplete="off">
+        <label class="btn btn-outline-secondary btn-sm right" for="fahrenheit-ref">Fahrenheit</label>
+      </div>
     </p>
       <div class="prediction-5dys">
         Hourly forecast
@@ -90,7 +83,6 @@
                 </div>
               <div class="degrees" id="degrees-forecast-0">
               </div> 
-              <span></span>
           </div>
 
           <div class="daycard">
@@ -101,7 +93,6 @@
               </div>
               <div class="degrees" id="degrees-forecast-1">
               </div>
-              <span></span>
           </div>
 
           <div class="daycard">
@@ -112,7 +103,6 @@
             </div>
             <div class="degrees" id="degrees-forecast-2">
             </div>
-            <span></span>
           </div>
 
           <div class="daycard">
@@ -124,7 +114,6 @@
             </div>
             <div class="degrees" id="degrees-forecast-3">
             </div>
-            <span></span>
           </div>
 
           <div class="daycard">
@@ -135,10 +124,9 @@
             </div>
             <div class="degrees" id="degrees-forecast-4">
             </div>
-            <span></span>
           </div>
           <div class="photoAcknowlegdement"> picture by Simone Hutsch </div>
-          <div class="codedBy"> <a href="https://github.com/ElisaSky/weather-app-she-codes-plus" target="blank">Open-source </a>
+          <div class="codedBy"> <a href="https://github.com/ElisaSky/weather-app-she-codes-plus" target="blank">open-source </a>
           coded by Elisa Sky</div>
   </div>
  
