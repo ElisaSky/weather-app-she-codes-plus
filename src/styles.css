@@ -16,7 +16,12 @@ h1 {
   margin: 5% 10% 2% 10%;
   font-size: 24px;
 }
-
+.row {
+  margin: 0 auto;
+  margin-left: 0;
+  text-align: left;
+}
+/* 3 collom structure */
 li {
   list-style-type: none;
 }
@@ -29,41 +34,28 @@ h2 {
   color: rgb(1, 0, 3,0.5);
   line-height: 1.5;
 }
-#degreeButtons{
-float: right;
-font-size: 10px;
-}
 
-#degreeButtons:active {
-background-color: grey;
-color:white;
-}
-
-.row {
-  margin: 0 auto;
-  margin-left: 0;
-  text-align: left;
-}
-.col-3,
-.col-4 {
-  padding: 0;
-}
 .temp {
   text-align: right;
 }
-.tempNow {
-  color: black;
+
+/*celsius fahrenheit buttons*/
+.btn-group button{
+background-color: grey;
+border: 1px solid green;
+color:white;
+padding:2px 5px;
+cursor:pointer;
+float:right;
+font-size:12px;
 }
-.tempUnit{
-  font-size:10px;
-}
+
 .weatherDescription{
   text-align:center;
   font-size: 16px;
   color: rgb(81, 112, 119,);
-  margin: 0 auto;
   display: block;
-  padding-bottom:5%; 
+  margin-bottom:3%; 
 }
 a:href {
   font-size:small;
@@ -83,11 +75,6 @@ a:hover {
 }
 a:active {
 background-color:#0000;
-}
-
-
-.weatherInfo {
-line-height: 1.7;
 }
 
 #entered-city {
