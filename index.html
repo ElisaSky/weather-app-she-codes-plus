@@ -24,10 +24,12 @@
     </row>
         <h2>
           <div class="row">
-            <div class="col-4 temp">
-                <div class="tempNow" id="degrees-shown">
-              </div>
-
+            <div class="col-4 temp" id="degrees-shown">
+              <ul>
+                <li id="current"></li>
+                <li id="minimal"></li>
+                <li id="maximal"></li>
+              </ul>
               </div>
             <div class="col-3" id="icon-current-weather">
                 <img src="#" class=shownWeather id=current-image>
@@ -64,12 +66,9 @@
       >Go</submit>
     </form>
     <p>
-      <div class="btn-group tempUnit" role="group" id="degreeButtons" aria-label="DegreesButton toggle button group">
-        <input type="degrees" class="btn-check" id="celsius-ref" autocomplete="on" checked>
-        <label class="btn btn-outline-secondary btn-sm left" for="celsius-ref">Celsius</label>
-      
-        <input type="degrees" class="btn-check" id="fahrenheit-ref" autocomplete="off">
-        <label class="btn btn-outline-secondary btn-sm right" for="fahrenheit-ref">Fahrenheit</label>
+      <div class="btn-group">
+        <button id="celsius-ref">Celsius</button>
+        <button id="fahrenheit-ref">Fahrenheit</button>
       </div>
     </p>
     <br/>

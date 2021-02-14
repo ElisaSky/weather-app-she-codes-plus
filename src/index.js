@@ -28,37 +28,41 @@ let apiKey = "13a1b6ce652bc0d4bb4d98d6d58fd9c2";
 function showTemperature (response){
     city = response.data.name;
    // document.querySelector("#entered-city").value = city;   //important to remember
-    let h1 = document.querySelector("h1");
-    let p1= document.querySelector("#current-weather-description-1");
-
     let temp = Math.round(response.data.main.temp);
     let feelTemp = Math.round(response.data.main.feels_like);
     let tempMin = Math.round(response.data.main.temp_min);
     let tempMax = Math.round(response.data.main.temp_max);
     let cloudsDescription = response.data.weather[0].description
-
-    let standardDegrees = document.querySelector("#degrees-shown");
-
     let humidityValue = Math.round (response.data.main.humidity);
-    let windValue = response.data.wind.speed;
+    let windValue = Math.round(response.data.wind.speed);
     let cloudValue = response.data.clouds.all;
+
+    let h1 = document.querySelector("h1");
+    let p1= document.querySelector("#current-weather-description-1");
+    let currentDegrees = document.querySelector("#current");
+    let minDegrees = document.querySelector("#minimal");
+    let maxDegrees = document.querySelector("#maximal");
     let humidity = document.querySelector("#humidity");
         humidity.innerHTML = `Precipitation ${humidityValue}%`;
     let wind = document.querySelector("#wind");
     let clouds = document.querySelector("#clouds");
         clouds.innerHTML = `Clouds ${cloudValue}%`; 
+
       if (unit=="imperial"){
         h1.innerHTML = `${city} feels like ${feelTemp}ºF`;
-        standardDegrees.innerHTML = `Currently ${temp}º <br> Min ${tempMin}º <br> Max ${tempMax}º`;
-        wind.innerHTML = `Wind ${windValue} m/hr`;
         p1.innerHTML = `Today, ${day} ${month} ${date}, will have ${cloudsDescription}. `;
-
+        currentDegrees.innerHTML = `Currently ${temp}º`;
+        minDegrees.innerHTML = `Min. ${tempMin}º`;
+        maxDegrees.innerHTML = `Max. ${tempMax}º`;
+        wind.innerHTML = `Wind ${windValue} mph`;
+        
       } else {
         h1.innerHTML = `${city} feels like ${feelTemp}ºC`;
-        standardDegrees.innerHTML = `Currently ${temp}º <br> Min ${tempMin}º <br> Max ${tempMax}º`;
-        wind.innerHTML = `Wind ${windValue} km/hrs`;
         p1.innerHTML = `Today, ${day} ${month} ${date}, will have ${cloudsDescription}.`;
-
+        currentDegrees.innerHTML = `Currently ${temp}º`;
+        minDegrees.innerHTML = `Min. ${tempMin}º`;
+        maxDegrees.innerHTML = `Max. ${tempMax}º`;
+        wind.innerHTML = `Wind ${windValue} km/h`;
     }
     let iconId = response.data.weather[0].id;
     let iconCurrentWeather= document.querySelector("#current-image");
