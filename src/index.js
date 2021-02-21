@@ -52,7 +52,6 @@ let apiKey = "13a1b6ce652bc0d4bb4d98d6d58fd9c2";
 function showTemperature(response) {
   city = response.data.name;
   let country = response.data.sys.country;
-  // document.querySelector("#entered-city").value = city;   //important to remember
   let temp = Math.round(response.data.main.temp);
   let feelTemp = Math.round(response.data.main.feels_like);
   let tempMin = Math.round(response.data.main.temp_min);
@@ -244,21 +243,3 @@ function getApiUrl() {
 function getApiUrlForecast() {
   return `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=${unit}&lang=en&appid=${apiKey}`;
 }
-
-//let tempToggle = true
-//tempToggle= document.querySelector("#tempToggle");
-//tempToggle.addEventListener("click", function(event) {
-//console.log(this.checked)
-//if (this.checked) {
-// CelsiusToFahrenheit(event)
-//} else {
-//  FahrenheitToCelsius (event)
-// }
-//})
-//tempToggle.addEventListener("click", FahrenheitToCelsius(true), CelsiusToFahrenheit(false))
-
-// achtergrond aanpassen aan weer op basis van locatie of beschrijving
-// naast hourly ook per dag?
-// aanpassen linker tekst colom naar ul/li met zelfde line height
-//aanpassen button grootte
-// text en tijd in het midden
