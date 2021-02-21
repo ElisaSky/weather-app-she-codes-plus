@@ -1,2 +1,3 @@
 # weather-app-she-codes-plus
-project studies making a weatherapp
+sept - feb 2021 project studies making a weatherapp
+created by Elisah Sky
