@@ -1,7 +1,7 @@
 // time
 
 let now = new Date();
-let days = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saterday"];
+let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saterday"];
 let day = days[now.getDay()];
 let months = ["January", "February", "March", "April", "May", "June", "Juli", "August", "September", "October", "November", "December"]; 
 let month = months[now.getMonth()];
