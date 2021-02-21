@@ -6,18 +6,16 @@ body {
   background-position: center;
   background-color: #87b3be;
   font-size: 16px;
-  
 }
 header {
-  color: rgb(81, 112, 119,0.5);
+  color: rgb(81, 112, 119, 0.5);
   font-size: 10px;
 }
 
 h1 {
   margin: 5% 10% 2% 10%;
   font-size: 24px;
-  letter-spacing:1.5px;
-
+  letter-spacing: 1.5px;
 }
 .row {
   margin: 0 auto;
@@ -34,10 +32,9 @@ ul {
 
 h2 {
   font-size: 14px;
-  color: rgb(1, 0, 3,0.6);
+  color: rgb(1, 0, 3, 0.6);
   line-height: 1.5;
-  letter-spacing:1px;
-
+  letter-spacing: 1px;
 }
 
 .temp {
@@ -47,75 +44,65 @@ h2 {
 /*celsius fahrenheit buttons*/
 
 .btn-group {
-margin-left:70%;
-font-family:verdana;
-
+  margin-left: 70%;
+  font-family: verdana;
 }
-.btn-group button{
-color: rgb(27, 90, 172);
-cursor:pointer;
-font-size:13px;
-transition:250ms;
-padding-top:5px;
-padding-bottom: 5px;
-font-family:Helvetica, sans-serif;
-letter-spacing:1.5px;
-font-weight: bold;
-
+.btn-group button {
+  color: rgb(27, 90, 172);
+  cursor: pointer;
+  font-size: 13px;
+  transition: 250ms;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-family: Helvetica, sans-serif;
+  letter-spacing: 1.5px;
+  font-weight: bold;
 }
-.btn-left{
+.btn-left {
   border-radius: 50px 0 0 50px;
   border-right: none;
   padding-left: 15px;
-  background-color:#ffffffFf;
-box-shadow:inset 0px 0px 4px rgb(204, 204, 204);
-
+  background-color: #ffffffff;
+  box-shadow: inset 0px 0px 4px rgb(204, 204, 204);
 }
-.btn-right{
+.btn-right {
   border-radius: 0 50px 50px 0;
-  padding-right:15px;
-  background-color:#ffffff;
-box-shadow:inset 0px 0px 4px rgb(204, 204, 204);
-
+  padding-right: 15px;
+  background-color: #ffffff;
+  box-shadow: inset 0px 0px 4px rgb(204, 204, 204);
 }
-.btn-group button:hover{
-  background-color:#0b75e771;
+.btn-group button:hover {
+  background-color: #0b75e771;
   color: rgb(5, 68, 150);
   font-weight: bolder;
   transition: 500ms;
-
-
-
 }
-.btn-group button:focus{
-  background-color:rgba(150, 150, 182, 0.377);
+.btn-group button:focus {
+  background-color: rgba(150, 150, 182, 0.377);
   color: rgb(1, 12, 27);
   font-weight: bolder;
-  font-size:12.5px;
+  font-size: 12.5px;
   transition: 550ms ease-in;
-
 }
-.btn-group button:current{
-  background-color:black;
+.btn-group button:current {
+  background-color: black;
 }
 
-.weatherDescription{
-  text-align:center;
+.weatherDescription {
+  text-align: center;
   font-size: 16px;
-  color: rgb(81, 112, 119,);
+  color: rgb(81, 112, 119);
   display: block;
-  margin-bottom:3%; 
-  letter-spacing:1px;
+  margin-bottom: 3%;
+  letter-spacing: 1px;
 }
 a:href {
-  font-size:small;
-    color: rgba(10, 104, 180, 0.7);
-
+  font-size: small;
+  color: rgba(10, 104, 180, 0.7);
 }
 a:link {
   text-decoration: none;
   font-weight: 5px;
-
 }
 a:visited {
   color: #000000;
@@ -124,7 +111,7 @@ a:hover {
   color: rgb(28, 55, 209);
 }
 a:active {
-background-color:#0000;
+  background-color: #0000;
 }
 
 #entered-city {
@@ -151,11 +138,10 @@ img {
   width: 60%;
   overflow: auto;
   width: 655px;
-  background: rgb(255, 255, 255,0.95);
+  background: rgb(255, 255, 255, 0.95);
   border: 1px solid #9cafc2;
   border-radius: 6px;
   box-shadow: 20px rgba(5, 5, 5, 0.9);
-
 }
 .prediction-5dys {
   border-radius: 3px;
@@ -166,10 +152,10 @@ img {
   width: 637px;
   min-height: 220px;
   font-weight: bolder;
-background-color:white;
-  box-shadow:0px 0px 3.5px rgba(108, 108, 109, 0.3);
-padding-top: 5px;
-  letter-spacing:1.5px;
+  background-color: white;
+  box-shadow: 0px 0px 3.5px rgba(108, 108, 109, 0.3);
+  padding-top: 5px;
+  letter-spacing: 1.5px;
 }
 .daycard {
   float: left;
@@ -180,12 +166,11 @@ padding-top: 5px;
   min-width: 100px;
   background-size: cover;
   font-weight: normal;
-
 }
 .weekday {
   color: rgba(0, 1, 56, 0.7);
   padding-bottom: 5px;
-  font-size:13.5px;
+  font-size: 13.5px;
 }
 .weather_img {
   display: block;
@@ -202,13 +187,11 @@ padding-top: 5px;
 .codedBy {
   color: rgb(0, 0, 0, 0.3);
   font-size: xx-small;
-  letter-spacing:0.5px;
-
+  letter-spacing: 0.5px;
 }
 .photoAcknowlegdement {
   text-align: center;
   color: rgb(0, 0, 0, 0.1);
   font-size: xx-small;
-  letter-spacing:1px;
-
+  letter-spacing: 1px;
 }
