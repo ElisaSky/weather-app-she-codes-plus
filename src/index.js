@@ -8,6 +8,11 @@ let month = months[now.getMonth()];
 let year = now.getUTCFullYear();
 let hrs = now.getUTCHours() + 1;
 let min = now.getUTCMinutes();
+if (min < 10) {
+  min = "0"+min
+}
+
+  
 let time = `${hrs} : ${min}`;
 let date = now.getDate();
 let dayTime = "AM";
@@ -15,7 +20,7 @@ let dayTime = "AM";
     dayTime = "PM"
   }
 let currentDate = document.querySelector("#current-date");
-currentDate.innerHTML = `Last updated ${date} ${month} ${year} `;
+currentDate.innerHTML = `Updated ${date} ${month} ${year} `;
 let currentTime = document.querySelector("#current-time");
 currentTime.innerHTML = `${time} ${dayTime} `;
 
@@ -32,7 +37,10 @@ function showTemperature (response){
     let feelTemp = Math.round(response.data.main.feels_like);
     let tempMin = Math.round(response.data.main.temp_min);
     let tempMax = Math.round(response.data.main.temp_max);
-    let cloudsDescription = response.data.weather[0].description
+    let cloudsDescription = response.data.weather[0].description;
+      if (cloudsDescription == "clear sky"){
+        cloudsDescription = "clear skies";
+      }
     let humidityValue = Math.round (response.data.main.humidity);
     let windValue = Math.round(response.data.wind.speed);
     let cloudValue = response.data.clouds.all;
@@ -252,3 +260,4 @@ function getApiUrlForecast (){
 // aanpassen linker tekst colom naar ul/li met zelfde line height
 //aanpassen button grootte
 // text en tijd in het midden
+
