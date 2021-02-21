@@ -1,7 +1,7 @@
 // time
 
 let now = new Date();
-let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saterday"];
+let days = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saterday"];
 let day = days[now.getDay()];
 let months = ["January", "February", "March", "April", "May", "June", "Juli", "August", "September", "October", "November", "December"]; 
 let month = months[now.getMonth()];
@@ -25,13 +25,14 @@ let currentTime = document.querySelector("#current-time");
 currentTime.innerHTML = `${time} ${dayTime} `;
 
 //global variables temperature
-let city = "Amsterdam";
+let city = "San Francisco";
 let unit = "metric"
 let apiKey = "13a1b6ce652bc0d4bb4d98d6d58fd9c2";
 
 
 function showTemperature (response){
     city = response.data.name;
+    let country = response.data.sys.country;
    // document.querySelector("#entered-city").value = city;   //important to remember
     let temp = Math.round(response.data.main.temp);
     let feelTemp = Math.round(response.data.main.feels_like);
@@ -39,7 +40,10 @@ function showTemperature (response){
     let tempMax = Math.round(response.data.main.temp_max);
     let cloudsDescription = response.data.weather[0].description;
       if (cloudsDescription == "clear sky"){
-        cloudsDescription = "clear skies";
+        cloudsDescription = "clear skies";  
+      }
+      if (cloudsDescription == "few clouds"){
+        cloudsDescription = "a few clouds";
       }
     let humidityValue = Math.round (response.data.main.humidity);
     let windValue = Math.round(response.data.wind.speed);
@@ -57,16 +61,16 @@ function showTemperature (response){
         clouds.innerHTML = `Clouds ${cloudValue}%`; 
 
       if (unit=="imperial"){
-        h1.innerHTML = `${city} feels like ${feelTemp}ºF`;
-        p1.innerHTML = `Today, ${day} ${month} ${date}, will have ${cloudsDescription}. `;
+        h1.innerHTML = `${city} (${country}) feels like ${feelTemp}ºF`;
+        p1.innerHTML = `${day} will have ${cloudsDescription} `;
         currentDegrees.innerHTML = `Currently ${temp}º`;
         minDegrees.innerHTML = `Min. ${tempMin}º`;
         maxDegrees.innerHTML = `Max. ${tempMax}º`;
         wind.innerHTML = `Wind ${windValue} mph`;
         
       } else {
-        h1.innerHTML = `${city} feels like ${feelTemp}ºC`;
-        p1.innerHTML = `Today, ${day} ${month} ${date}, will have ${cloudsDescription}.`;
+        h1.innerHTML = `${city} (${country}) feels like ${feelTemp}ºC`;
+        p1.innerHTML = `${day} will have ${cloudsDescription}`;
         currentDegrees.innerHTML = `Currently ${temp}º`;
         minDegrees.innerHTML = `Min. ${tempMin}º`;
         maxDegrees.innerHTML = `Max. ${tempMax}º`;
@@ -183,7 +187,6 @@ function enteredCity(event){
   let apiUrlValue = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=${unit}&lang=en&appid=${apiKey}`;
   axios.get(apiUrlValue).then(showTemperature);
   axios.get(getApiUrlForecast()).then(showForecast);
-//conroleren of hij nu ook bij forecast de juiste pakt
 }
 
 let button = document.querySelector("#button");
@@ -191,7 +194,6 @@ button.addEventListener("click", enteredCity);
 let textField = document.querySelector("#entered-city");
 textField.addEventListener("keypress", function(event) {
   if (event.key == "Enter") {
-    //difficult stuff  enter on key> dont foget....(!!!)
     enteredCity(event);
   }
 })
