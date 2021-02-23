@@ -1,17 +1,16 @@
-
-
 body {
   text-align: center;
   color: rgba(29, 48, 49, 0.8);
   font-size: 16px;
   letter-spacing: 1.5px;
-  background: url("../images/flavio-gasperini-unsplash.jpeg") no-repeat center center fixed;
-    -webkit-background-size:cover;
-
+  background: url("../images/flavio-gasperini-unsplash.jpeg") no-repeat center
+    center fixed;
+  -webkit-background-size: cover;
 }
-header, footer {
+header,
+footer {
   font-size: 11px;
-  color:#b2cac8;
+  color: #b2cac8;
   letter-spacing: 1px;
 }
 
@@ -19,10 +18,10 @@ h1 {
   margin: 3% 10% 1% 10%;
   font-size: 24px;
   letter-spacing: 1.5px;
-  color:#121D1E;
+  color: #121d1e;
 }
 h2 {
-  font-size:16px;
+  font-size: 16px;
   display: block;
   margin-bottom: 3%;
 }
@@ -40,8 +39,8 @@ ul {
   padding: 0;
 }
 .temp {
-  font-size:xx-large;
-  padding:5% 0 5% 0;
+  font-size: xx-large;
+  padding: 5% 0 5% 0;
   text-align: right;
 }
 .row {
@@ -58,19 +57,19 @@ ul {
   color: white;
   font-size: 12px;
   font-family: Arial, Helvetica, sans-serif;
-  box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
-  display:inline-block;
-    font-weight: 400;
-    line-height: 1.5;
-    text-align: center;
-    text-decoration: none;
-    vertical-align: middle;
-    cursor: pointer;
-    user-select: none;
-    background-color: #106bf3;;
-    border: -1px solid transparent;
-    color: #fff;
-    border-color: #0d6efd
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  display: inline-block;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  background-color: #106bf3;
+  border: -1px solid transparent;
+  color: #fff;
+  border-color: #0d6efd;
 }
 .btn-left {
   border-radius: 50px 0 0 50px;
@@ -80,25 +79,24 @@ ul {
 }
 .btn-group button:hover {
   background-color: #0a58ca;
-  border-color:#0a53be;
+  border-color: #0a53be;
   color: white;
   transition: 500ms;
 }
 .btn-group button:focus {
   background-color: #0a58ca;
-  border-color:#0a53be;
+  border-color: #0a53be;
   color: white;
   transition: 550ms ease-in;
   user-select: none;
 }
 .btn-group button:current {
   background-color: #0a58ca;
-      user-select: none;
+  user-select: none;
 }
 
-
 footer a:link {
-color:#1067e9;
+  color: #1067e9;
 }
 footer a:visited {
   color: #7a95bd;
@@ -108,7 +106,7 @@ footer a:hover {
 }
 footer a:active {
   background-color: #7a95bd;
-};
+}
 
 #entered-city {
   color: rgba(0, 0, 0, 0.4);
@@ -133,26 +131,26 @@ img {
   width: 60%;
   overflow: auto;
   min-width: 670px;
-  background:#F8FAF9;
+  background: #f8faf9;
   border-radius: 6px;
-  box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
-   border: -1px solid transparent;
-    border-color: #78879c
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  border: -1px solid transparent;
+  border-color: #78879c;
 }
 .prediction-5dys {
   display: inline-block;
   border-radius: 3px;
   width: 60%;
-  padding:2%;
+  padding: 2%;
   margin: 1%;
   min-width: 637px;
   font-weight: bolder;
   background-color: rgba(255, 255, 255, 0.9);
-  box-shadow: 1px .5rem 1rem rgba(0,0,0,.15);
+  box-shadow: 1px 0.5rem 1rem rgba(0, 0, 0, 0.15);
   padding-top: 5px;
 }
 .daycard {
-  display:inline-block;
+  display: inline-block;
   align-content: center;
   margin: 1% 2% 1% 2%;
   font-weight: normal;
@@ -167,8 +165,7 @@ img {
   width: auto;
   line-height: 60px;
 }
-
 .coded a {
-  color:#b2cac8;;
+  color: #b2cac8;
   letter-spacing: 0.5px;
 }

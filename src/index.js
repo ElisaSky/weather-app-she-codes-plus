@@ -42,7 +42,6 @@ if (hrs > 11) {
 let currentDate = document.querySelector("#current-date");
 currentDate.innerHTML = `Updated ${date} ${month} ${year} ${time} ${dayTime} `;
 
-
 //global variables temperature
 let city = "San Francisco";
 let unit = "metric";
@@ -51,6 +50,8 @@ let apiKey = "13a1b6ce652bc0d4bb4d98d6d58fd9c2";
 function showTemperature(response) {
   city = response.data.name;
   let country = response.data.sys.country;
+  flag();
+
   let temp = Math.round(response.data.main.temp);
   let feelTemp = Math.round(response.data.main.feels_like);
   let tempMin = Math.round(response.data.main.temp_min);
@@ -109,7 +110,14 @@ function showTemperature(response) {
     iconCurrentWeather.src = "images/Wolken-regen.png";
   }
 }
-
+///////WERKT NOG NIET
+function flag() {
+  if ((country = "US")) {
+    country = "🇺🇸";
+  } else if ((country = "NL")) {
+    country = "🇱🇺";
+  }
+}
 function showForecast(response) {
   //daycard 0:
   let temp0 = document.querySelector("#degrees-forecast-0");
