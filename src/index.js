@@ -33,7 +33,7 @@ if (min < 10) {
   min = "0" + min;
 }
 
-let time = `${hrs} : ${min}`;
+let time = `${hrs}:${min}`;
 let date = now.getDate();
 let dayTime = "AM";
 if (hrs > 11) {
@@ -67,10 +67,9 @@ function showTemperature(response) {
   let cloudValue = response.data.clouds.all;
 
   let h1 = document.querySelector("h1");
-  let p1 = document.querySelector("#current-weather-description-1");
+  let h2 = document.querySelector("#current-weather-description");
   let currentDegrees = document.querySelector("#current");
-  let minDegrees = document.querySelector("#minimal");
-  let maxDegrees = document.querySelector("#maximal");
+  let minMax = document.querySelector("#minMax");
   let humidity = document.querySelector("#humidity");
   humidity.innerHTML = `Precipitation ${humidityValue}%`;
   let wind = document.querySelector("#wind");
@@ -79,17 +78,15 @@ function showTemperature(response) {
 
   if (unit == "imperial") {
     h1.innerHTML = `${city} (${country}) feels like ${feelTemp}ºF`;
-    p1.innerHTML = `${day} will have ${cloudsDescription} `;
-    currentDegrees.innerHTML = `Currently ${temp}º`;
-    minDegrees.innerHTML = `Min. ${tempMin}º`;
-    maxDegrees.innerHTML = `Max. ${tempMax}º`;
+    h2.innerHTML = `${day} will have ${cloudsDescription} `;
+    currentDegrees.innerHTML = `${temp}℉`;
+    minMax.innerHTML = `🔥 ${tempMax}℃  - ${tempMin}℃ ⛄️`;
     wind.innerHTML = `Wind ${windValue} mph`;
   } else {
-    h1.innerHTML = `${city} (${country}) feels like ${feelTemp}ºC`;
-    p1.innerHTML = `${day} will have ${cloudsDescription}`;
-    currentDegrees.innerHTML = `Currently ${temp}º`;
-    minDegrees.innerHTML = `Min. ${tempMin}º`;
-    maxDegrees.innerHTML = `Max. ${tempMax}º`;
+    h1.innerHTML = `${city} (${country}) feels like ${feelTemp}℃`;
+    h2.innerHTML = `${day} will have ${cloudsDescription}`;
+    currentDegrees.innerHTML = `${temp}℃`;
+    minMax.innerHTML = `🔥 ${tempMax}℃  - ${tempMin}℃ ⛄️`;
     wind.innerHTML = `Wind ${windValue} km/h`;
   }
   let iconId = response.data.weather[0].id;

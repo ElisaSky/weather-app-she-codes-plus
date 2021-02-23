@@ -13,23 +13,20 @@
 
 <body>
   <div class="container">
-    <header>
-        <span id="current-date"></span>
+    <header id="current-date">
     </header>
-    <h1>
+    <h1 class="weatherFeel">
     </h1>
-    <row class="weatherDescription" id="current-weather-description-1" id="current-weather-description-2">
-    </row>
-        <h2>
+    <h2 id="current-weather-description" >
+    </h2>
+        <h3>
+          <span id="minMax"></span>
           <hr />
           <div class="row">
-            <div class="col-4 temp" id="degrees-shown">
-              <ul>
-                <li id="current"></li>
-                <li id="minimal"></li>
-                <li id="maximal"></li>
-              </ul>
+            <div class="col-4">
+              <div class="temp" id="current">
               </div>
+            </div>
             <div class="col-3" id="icon-current-weather">
                 <img src="#" class=shownWeather id=current-image>
             </div>
@@ -41,7 +38,7 @@
               </ul>
             </div>
           </div>
-          </h2>
+          </h3>
     <p>
     <form class="input-group ">
       <input 
@@ -67,8 +64,8 @@
     </p>
     <span>
       <div class="btn-group" input type="radio">
-        <button class= "btn-left" id="celsius-ref">C</button>
-        <button class= "btn-right" id="fahrenheit-ref">F</button>
+        <button class= "btn-left" id="celsius-ref">℃</button>
+        <button class= "btn-right" id="fahrenheit-ref">℉</button>
       </div>
     </span>
       <div class="prediction-5dys">
@@ -125,16 +122,11 @@
             </div>
           </div>
         </div>
-
-          <div class="photoAcknowlegdement"> picture by Simone Hutsch </div>
-          
-  
- 
   </div>
-  <footer class="codedBy">
+  <footer class="coded">
   <a href="https://github.com/ElisaSky/weather-app-she-codes-plus" target="blank">Open-source coded by Elisa Sky</a>
   <br/>
-  <a href="https://unsplash.com/@flaviewxvx?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText"> Photo by Flavio Gasperini</a> on <a href="https://unsplash.com/wallpapers?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a>
+  Photo by<a href="https://unsplash.com/@flaviewxvx?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" target="blank"> Flavio Gasperini</a> on <a href="https://unsplash.com/wallpapers?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" target="blank">Unsplash</a>
 
   </footer>
   </body>
