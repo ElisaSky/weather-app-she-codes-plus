@@ -40,9 +40,8 @@ if (hrs > 11) {
   dayTime = "PM";
 }
 let currentDate = document.querySelector("#current-date");
-currentDate.innerHTML = `Updated ${date} ${month} ${year} `;
-let currentTime = document.querySelector("#current-time");
-currentTime.innerHTML = `${time} ${dayTime} `;
+currentDate.innerHTML = `Updated ${date} ${month} ${year} ${time} ${dayTime} `;
+
 
 //global variables temperature
 let city = "San Francisco";
