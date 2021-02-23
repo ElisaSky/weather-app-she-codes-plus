@@ -78,10 +78,10 @@ function showTemperature(response) {
   clouds.innerHTML = `Clouds ${cloudValue}%`;
 
   if (unit == "imperial") {
-    h1.innerHTML = `${city} (${country}) feels like ${feelTemp}ºF`;
+    h1.innerHTML = `${city} (${country}) feels like ${feelTemp}℉`;
     h2.innerHTML = `${day} will have ${cloudsDescription} `;
     currentDegrees.innerHTML = `${temp}℉`;
-    minMax.innerHTML = `🔥 ${tempMax}℃  - ${tempMin}℃ ⛄️`;
+    minMax.innerHTML = `🔥 ${tempMax}℉  - ${tempMin}℉ ⛄️`;
     wind.innerHTML = `Wind ${windValue} mph`;
   } else {
     h1.innerHTML = `${city} (${country}) feels like ${feelTemp}℃`;

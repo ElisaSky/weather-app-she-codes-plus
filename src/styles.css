@@ -135,7 +135,7 @@ img {
   width: 60%;
   overflow: auto;
   min-width: 670px;
-  background: #f8faf9;
+  background: hsl(150, 17%, 98%, 0.97);
   border-radius: 6px;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   border: -1px solid transparent;
