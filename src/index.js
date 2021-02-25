@@ -1,5 +1,4 @@
 // time
-
 let now = new Date();
 let days = [
   "Sunday",
@@ -32,12 +31,11 @@ let min = now.getUTCMinutes();
 if (min < 10) {
   min = "0" + min;
 }
-
 let time = `${hrs}:${min}`;
 let date = now.getDate();
 let dayTime = "AM";
 if (hrs > 11) {
-  dayTime = "PM";
+  dayTime = "PM UTC";
 }
 let currentDate = document.querySelector("#current-date");
 currentDate.innerHTML = `Updated ${date} ${month} ${year} ${time} ${dayTime} `;
@@ -49,8 +47,7 @@ let apiKey = "13a1b6ce652bc0d4bb4d98d6d58fd9c2";
 
 function showTemperature(response) {
   city = response.data.name;
-  let country = response.data.sys.country;
-  flag();
+  let country = flag(response.data.sys.country);
 
   let temp = Math.round(response.data.main.temp);
   let feelTemp = Math.round(response.data.main.feels_like);
@@ -66,7 +63,6 @@ function showTemperature(response) {
   let humidityValue = Math.round(response.data.main.humidity);
   let windValue = Math.round(response.data.wind.speed);
   let cloudValue = response.data.clouds.all;
-
   let h1 = document.querySelector("h1");
   let h2 = document.querySelector("#current-weather-description");
   let currentDegrees = document.querySelector("#current");
@@ -77,19 +73,26 @@ function showTemperature(response) {
   let clouds = document.querySelector("#clouds");
   clouds.innerHTML = `Clouds ${cloudValue}%`;
 
+  //changes in text C /F
+  let symbol = "℃";
+  let symbolWind = "km/u";
   if (unit == "imperial") {
-    h1.innerHTML = `${city} (${country}) feels like ${feelTemp}℉`;
-    h2.innerHTML = `${day} will have ${cloudsDescription} `;
-    currentDegrees.innerHTML = `${temp}℉`;
-    minMax.innerHTML = `🔥 ${tempMax}℉  - ${tempMin}℉ ⛄️`;
-    wind.innerHTML = `Wind ${windValue} mph`;
-  } else {
-    h1.innerHTML = `${city} (${country}) feels like ${feelTemp}℃`;
-    h2.innerHTML = `${day} will have ${cloudsDescription}`;
-    currentDegrees.innerHTML = `${temp}℃`;
-    minMax.innerHTML = `🔥 ${tempMax}℃  - ${tempMin}℃ ⛄️`;
-    wind.innerHTML = `Wind ${windValue} km/h`;
+    symbol = "℉";
+    symbolWind = "mph";
   }
+  h1.innerHTML = `${city} ${country} feels like ${feelTemp} ${symbol}`;
+  h2.innerHTML = `${day} will have ${cloudsDescription} `;
+  currentDegrees.innerHTML = `${temp}${symbol}`;
+  minMax.innerHTML = `⬇️ ${tempMin}${symbol} - ⬆️ ${tempMax}${symbol}  `;
+  wind.innerHTML = `Wind ${windValue} ${symbolWind}`;
+  // making a country flag based on deci
+  function flag(country) {
+    return String.fromCodePoint(
+      country[0].codePointAt() + 127397,
+      country[1].codePointAt() + 127397
+    );
+  }
+  //weather icons
   let iconId = response.data.weather[0].id;
   let iconCurrentWeather = document.querySelector("#current-image");
   if ((iconId >= 200) & (iconId < 300)) {
@@ -110,44 +113,30 @@ function showTemperature(response) {
     iconCurrentWeather.src = "images/Wolken-regen.png";
   }
 }
-///////WERKT NOG NIET
-function flag() {
-  if ((country = "US")) {
-    country = "🇺🇸";
-  } else if ((country = "NL")) {
-    country = "🇱🇺";
-  }
-}
+
 function showForecast(response) {
   //daycard 0:
   let temp0 = document.querySelector("#degrees-forecast-0");
   let tempCard0 = Math.round(response.data.list[0].main.temp);
-  //1
   let temp1 = document.querySelector("#degrees-forecast-1");
   let tempCard1 = Math.round(response.data.list[1].main.temp);
-  //2
   let temp2 = document.querySelector("#degrees-forecast-2");
   let tempCard2 = Math.round(response.data.list[2].main.temp);
-  //3
   let temp3 = document.querySelector("#degrees-forecast-3");
   let tempCard3 = Math.round(response.data.list[3].main.temp);
-  //4
   let temp4 = document.querySelector("#degrees-forecast-4");
   let tempCard4 = Math.round(response.data.list[4].main.temp);
-
+  let symbol = "℃";
+  let symbolWind = "km/u";
   if (unit == "imperial") {
-    temp0.innerHTML = `${tempCard0}ºF`;
-    temp1.innerHTML = `${tempCard1}ºF`;
-    temp2.innerHTML = `${tempCard2}ºF`;
-    temp3.innerHTML = `${tempCard3}ºF`;
-    temp4.innerHTML = `${tempCard4}ºF`;
-  } else {
-    temp0.innerHTML = `${tempCard0}ºC`;
-    temp1.innerHTML = `${tempCard1}ºC`;
-    temp2.innerHTML = `${tempCard2}ºC`;
-    temp3.innerHTML = `${tempCard3}ºC`;
-    temp4.innerHTML = `${tempCard4}ºC`;
+    symbol = "℉";
+    symbolWind = "mph";
   }
+  temp0.innerHTML = `${tempCard0} ${symbol}`;
+  temp1.innerHTML = `${tempCard1} ${symbol}`;
+  temp2.innerHTML = `${tempCard2} ${symbol}`;
+  temp3.innerHTML = `${tempCard3} ${symbol}`;
+  temp4.innerHTML = `${tempCard4} ${symbol}`;
 
   function forecastCard(number) {
     let timeCard = document.querySelector("#date-day-" + number);
