@@ -7,6 +7,23 @@ body {
     center fixed;
   -webkit-background-size: cover;
 }
+
+.container {
+  align-content: center;
+  padding: 1%;
+  vertical-align: center;
+  margin-top: 15%;
+  
+  overflow: auto;
+  min-width: 670px;
+  max-width: 670px;
+  background: hsl(150, 17%, 98%, 0.97);
+  border-radius: 6px;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  border: -1px solid transparent;
+  border-color: #78879c;
+}
+
 header,
 footer {
   font-size: 11px;
@@ -127,20 +144,6 @@ img {
   width: 85px;
 }
 
-.container {
-  align-content: center;
-  padding: 1%;
-  vertical-align: center;
-  margin-top: 15%;
-  width: 60%;
-  overflow: auto;
-  min-width: 670px;
-  background: hsl(150, 17%, 98%, 0.97);
-  border-radius: 6px;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-  border: -1px solid transparent;
-  border-color: #78879c;
-}
 .prediction-5dys {
   display: inline-block;
   border-radius: 3px;
